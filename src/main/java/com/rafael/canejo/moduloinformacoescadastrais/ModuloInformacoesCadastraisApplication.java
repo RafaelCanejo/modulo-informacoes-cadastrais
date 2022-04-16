@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ModuloInformacoesCadastraisApplication {
 
 	public static void main(String[] args) {
+		System.setProperty("spring.config.name", "modulo-informacoes-cadastrais-config");
 		SpringApplication.run(ModuloInformacoesCadastraisApplication.class, args);
 	}
 

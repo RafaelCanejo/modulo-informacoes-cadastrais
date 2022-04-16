@@ -1,0 +1,19 @@
+server:
+  port: 8083
+  servlet:
+    context-path: /informacoes-cadastrais
+
+# Configuration postgresql Database
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/homedb
+    username: root
+    password: root
+    initial-size: 2
+    max-active: 5
+    max-idle: 2
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
