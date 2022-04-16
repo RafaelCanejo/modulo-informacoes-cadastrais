@@ -7,4 +7,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AssociadoRepository extends JpaRepository<AssociadoEntity, Long> {
 
+    void deleteByCpf(String cpf);
+
+    AssociadoEntity findByCpf(String cpf);
+
 }
