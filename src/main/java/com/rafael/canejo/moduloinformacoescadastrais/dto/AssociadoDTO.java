@@ -1,16 +1,13 @@
 package com.rafael.canejo.moduloinformacoescadastrais.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import lombok.*;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
 @Builder
-@Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonInclude(Include.NON_NULL)
@@ -22,7 +19,6 @@ public class AssociadoDTO implements Serializable{
 
   private Long id;
 
-  @Temporal(TemporalType.TIMESTAMP)
   private Date createdAt;
 
   private String planoContratado;

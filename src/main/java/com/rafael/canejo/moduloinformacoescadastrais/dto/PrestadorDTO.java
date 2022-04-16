@@ -1,16 +1,15 @@
 package com.rafael.canejo.moduloinformacoescadastrais.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import lombok.*;
 
-import javax.persistence.*;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import java.io.Serializable;
 import java.util.Date;
 
 @Builder
-@Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonInclude(Include.NON_NULL)
@@ -23,8 +22,7 @@ public class PrestadorDTO implements Serializable {
 
   private Long id;
 
-  @Temporal(TemporalType.TIMESTAMP)
-  private Date createdAt = new Date();
+  private Date createdAt;
 
   private String empresa;
 
