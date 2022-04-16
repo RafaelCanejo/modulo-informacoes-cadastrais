@@ -20,10 +20,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8083/informacoes-cadastrais/prestador",
+					"raw": "http://35.192.141.87:8083/informacoes-cadastrais/prestador",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"35",
+						"192",
+						"141",
+						"87"
 					],
 					"port": "8083",
 					"path": [
@@ -49,10 +52,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8083/informacoes-cadastrais/associado",
+					"raw": "http://35.192.141.87:8083/informacoes-cadastrais/associado",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"35",
+						"192",
+						"141",
+						"87"
 					],
 					"port": "8083",
 					"path": [
@@ -78,10 +84,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8083/informacoes-cadastrais/prestador/123456-71",
+					"raw": "http://35.192.141.87:8083/informacoes-cadastrais/prestador/123456-71",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"35",
+						"192",
+						"141",
+						"87"
 					],
 					"port": "8083",
 					"path": [
@@ -108,10 +117,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8083/informacoes-cadastrais/associado/660.209.940-07",
+					"raw": "http://35.192.141.87:8083/informacoes-cadastrais/associado/660.209.940-07",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"35",
+						"192",
+						"141",
+						"87"
 					],
 					"port": "8083",
 					"path": [
@@ -138,10 +150,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8083/informacoes-cadastrais/prestador",
+					"raw": "http://35.192.141.87:8083/informacoes-cadastrais/prestador",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"35",
+						"192",
+						"141",
+						"87"
 					],
 					"port": "8083",
 					"path": [
@@ -167,10 +182,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8083/informacoes-cadastrais/associado",
+					"raw": "http://35.192.141.87:8083/informacoes-cadastrais/associado",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"35",
+						"192",
+						"141",
+						"87"
 					],
 					"port": "8083",
 					"path": [
@@ -199,10 +217,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8083/informacoes-cadastrais/associado?cpf=660.209.940-07",
+					"raw": "http://35.192.141.87:8083/informacoes-cadastrais/associado?cpf=660.209.940-07",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"35",
+						"192",
+						"141",
+						"87"
 					],
 					"port": "8083",
 					"path": [
@@ -237,10 +258,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8083/informacoes-cadastrais/prestador?registro-profissional=123456-71",
+					"raw": "http://35.192.141.87:8083/informacoes-cadastrais/prestador?registro-profissional=123456-71",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"35",
+						"192",
+						"141",
+						"87"
 					],
 					"port": "8083",
 					"path": [
