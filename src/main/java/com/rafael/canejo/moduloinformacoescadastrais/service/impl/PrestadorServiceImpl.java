@@ -33,7 +33,8 @@ public class PrestadorServiceImpl implements PrestadorService {
 
   @Override
   public PrestadorDTO atualizarPrestador(PrestadorDTO prestadorDTO) {
-    PrestadorEntity prestadorEntity = prestadorDTO.converterDTOParaEntity(prestadorDTO);
+    PrestadorEntity prestadorEntity = prestadorRepository.findByRegistroProfissional(prestadorDTO.getRegistroProfissional());
+    prestadorEntity = prestadorDTO.atualizarPrestador(prestadorDTO, prestadorEntity);
     PrestadorDTO prestador = prestadorDTO.converterEntityParaDTO(prestadorRepository.save(prestadorEntity));
     log.info("[SUCESSO][Prestador atualizado com sucesso: {}]", prestador.getRegistroProfissional());
     return prestador;
@@ -41,7 +42,8 @@ public class PrestadorServiceImpl implements PrestadorService {
 
   @Override
   public void deletarPrestador(String registroProfissional) {
-    prestadorRepository.deleteByRegistroProfissional(registroProfissional);
+    PrestadorEntity prestadorEntity = prestadorRepository.findByRegistroProfissional(registroProfissional);
+    prestadorRepository.delete(prestadorEntity);
     log.info("[SUCESSO][Prestador excluído com sucesso: {}]", registroProfissional);
   }
 

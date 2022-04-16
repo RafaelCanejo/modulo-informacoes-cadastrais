@@ -46,7 +46,7 @@ public class CadastroPrestadorController {
   public ResponseEntity<PrestadorDTO> atualizarPrestador(@RequestBody PrestadorDTO prestadorDTO) {
     PrestadorDTO prestadorAtualizado = prestadorService.atualizarPrestador(prestadorDTO);
     URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{registroProfissional}").buildAndExpand(prestadorAtualizado.getRegistroProfissional()).toUri();
-    return ResponseEntity.created(uri).body(prestadorAtualizado);
+    return ResponseEntity.ok().body(prestadorAtualizado);
   }
 
 }

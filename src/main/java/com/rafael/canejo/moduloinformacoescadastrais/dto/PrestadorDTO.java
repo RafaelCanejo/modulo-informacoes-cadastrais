@@ -1,5 +1,6 @@
 package com.rafael.canejo.moduloinformacoescadastrais.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.rafael.canejo.moduloinformacoescadastrais.entity.AssociadoEntity;
@@ -22,8 +23,10 @@ public class PrestadorDTO implements Serializable {
 
   private static final Long serialVersionUID = 1L;
 
+  @JsonIgnore
   private Long id;
 
+  @JsonIgnore
   private Date createdAt;
 
   private String empresa;
@@ -70,7 +73,6 @@ public class PrestadorDTO implements Serializable {
     return PrestadorEntity.builder()
                             .celular(prestadorDTO.getCelular())
                             .cpf(prestadorDTO.getCpf())
-                            .createdAt(prestadorDTO.getCreatedAt())
                             .dataInicioPrestacaoServico(prestadorDTO.getDataInicioPrestacaoServico())
                             .dataNascimento(prestadorDTO.getDataNascimento())
                             .empresa(prestadorDTO.getEmpresa())
@@ -82,5 +84,20 @@ public class PrestadorDTO implements Serializable {
                             .registroProfissional(prestadorDTO.getRegistroProfissional())
                             .rg(prestadorDTO.getRg())
                           .build();
+  }
+
+  public PrestadorEntity atualizarPrestador(PrestadorDTO prestadorDTO, PrestadorEntity prestadorEntity) {
+    prestadorEntity.setCelular(prestadorDTO.getCelular());
+    prestadorEntity.setCpf(prestadorDTO.getCpf());
+    prestadorEntity.setDataInicioPrestacaoServico(prestadorDTO.getDataInicioPrestacaoServico());
+    prestadorEntity.setDataNascimento(prestadorDTO.getDataNascimento());
+    prestadorEntity.setEmpresa(prestadorDTO.getEmpresa());
+    prestadorEntity.setEndereco(prestadorDTO.getEndereco());
+    prestadorEntity.setEspecialidade(prestadorDTO.getEspecialidade());
+    prestadorEntity.setFormacao(prestadorDTO.getFormacao());
+    prestadorEntity.setNome(prestadorDTO.getNome());
+    prestadorEntity.setRegistroProfissional(prestadorDTO.getRegistroProfissional());
+    prestadorEntity.setRg(prestadorDTO.getRg());
+    return prestadorEntity;
   }
 }

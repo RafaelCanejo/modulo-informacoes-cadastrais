@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "879c5cc4-300a-4d7d-94a6-b9c412ca6822",
+		"name": "MÓDULO DE INFORMAÇÕES CADASTRAIS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Atualizar Prestador",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"celular\": \"(11)960004375\",\r\n  \"cpf\": \"660.209.940-07\",\r\n  \"dataInicioPrestacaoServico\": \"16/04/2022\",\r\n  \"dataNascimento\": \"18/12/1995\",\r\n  \"empresa\": \"Nome Ficticio\",\r\n  \"endereco\": \"Rua Ficticia\",\r\n  \"especialidade\": \"Médico\",\r\n  \"formacao\": \"Medicina\", \r\n  \"nome\": \"Rafael Canejo Alterado Denovo\",\r\n  \"registroProfissional\": \"123456-71\",\r\n  \"rg\": \"27.531.866-7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/informacoes-cadastrais/prestador",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"informacoes-cadastrais",
+						"prestador"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Associado",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"celular\": \"(11)96075-4545\",\r\n  \"cpf\": \"660.209.940-07\", \r\n  \"dataNascimento\": \"18/12/1995\",\r\n  \"dataVigenciaPlano\": \"15/04/2022\",\r\n  \"endereco\": \"Rua Exemplo\",\r\n  \"nome\": \"Rafael Canejo Associado Alterado Denovo\",\r\n  \"planoContratado\": \"Empresarial\",\r\n  \"rg\": \"46.523.239-9\",\r\n  \"statusCadastro\": \"Ativo\",\r\n  \"tipoPlanoContratado\": \"Enfermaria\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/informacoes-cadastrais/associado",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"informacoes-cadastrais",
+						"associado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Prestador",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/informacoes-cadastrais/prestador/123456-71",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"informacoes-cadastrais",
+						"prestador",
+						"123456-71"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Associado",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/informacoes-cadastrais/associado/660.209.940-07",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"informacoes-cadastrais",
+						"associado",
+						"660.209.940-07"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Prestador",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"celular\": \"(11)960004379\",\r\n  \"cpf\": \"660.209.940-07\",\r\n  \"dataInicioPrestacaoServico\": \"16/04/2022\",\r\n  \"dataNascimento\": \"18/12/1995\",\r\n  \"empresa\": \"Nome Ficticio\",\r\n  \"endereco\": \"Rua Ficticia\",\r\n  \"especialidade\": \"Médico\",\r\n  \"formacao\": \"Medicina\", \r\n  \"nome\": \"Rafael Canejo\",\r\n  \"registroProfissional\": \"123456-71\",\r\n  \"rg\": \"27.531.866-7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/informacoes-cadastrais/prestador",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"informacoes-cadastrais",
+						"prestador"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Associado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"celular\": \"(11)96075-4545\",\r\n  \"cpf\": \"660.209.940-07\", \r\n  \"dataNascimento\": \"18/12/1995\",\r\n  \"dataVigenciaPlano\": \"15/04/2022\",\r\n  \"endereco\": \"Rua Exemplo\",\r\n  \"nome\": \"Rafael Canejo Associado\",\r\n  \"planoContratado\": \"Empresarial\",\r\n  \"rg\": \"46.523.239-9\",\r\n  \"statusCadastro\": \"Ativo\",\r\n  \"tipoPlanoContratado\": \"Enfermaria\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/informacoes-cadastrais/associado",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"informacoes-cadastrais",
+						"associado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Associado",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/informacoes-cadastrais/associado?cpf=660.209.940-07",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"informacoes-cadastrais",
+						"associado"
+					],
+					"query": [
+						{
+							"key": "cpf",
+							"value": "660.209.940-07"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Prestador",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/informacoes-cadastrais/prestador?registro-profissional=123456-71",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"informacoes-cadastrais",
+						"prestador"
+					],
+					"query": [
+						{
+							"key": "registro-profissional",
+							"value": "123456-71"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

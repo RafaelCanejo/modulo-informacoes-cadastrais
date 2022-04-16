@@ -46,7 +46,7 @@ public class CadastroAssociadoController {
   public ResponseEntity<AssociadoDTO> atualizarAssociado(@RequestBody AssociadoDTO associadoDTO) {
     AssociadoDTO associadoAtualizado = associadoService.atualizarAssociado(associadoDTO);
     URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{cpf}").buildAndExpand(associadoAtualizado.getCpf()).toUri();
-    return ResponseEntity.created(uri).body(associadoAtualizado);
+    return ResponseEntity.ok().body(associadoAtualizado);
   }
 
 }

@@ -1,5 +1,6 @@
 package com.rafael.canejo.moduloinformacoescadastrais.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.rafael.canejo.moduloinformacoescadastrais.entity.AssociadoEntity;
@@ -18,8 +19,10 @@ import java.util.Date;
 public class AssociadoDTO implements Serializable{
   private static final Long serialVersionUID = 1L;
 
+  @JsonIgnore
   private Long id;
 
+  @JsonIgnore
   private Date createdAt;
 
   private String planoContratado;
@@ -63,8 +66,7 @@ public class AssociadoDTO implements Serializable{
   public AssociadoEntity converterDTOParaEntity(AssociadoDTO associadoDTO) {
     return AssociadoEntity.builder()
             .celular(associadoDTO.getCelular())
-            .cpf(associadoDTO.getCelular())
-            .createdAt(associadoDTO.getCreatedAt())
+            .cpf(associadoDTO.getCpf())
             .dataNascimento(associadoDTO.getDataNascimento())
             .dataVigenciaPlano(associadoDTO.getDataVigenciaPlano())
             .endereco(associadoDTO.getEndereco())
@@ -75,5 +77,19 @@ public class AssociadoDTO implements Serializable{
             .statusCadastro(associadoDTO.getStatusCadastro())
             .tipoPlanoContratado(associadoDTO.getTipoPlanoContratado())
             .build();
+  }
+
+  public AssociadoEntity atualizarAssociado(AssociadoDTO associadoDTO, AssociadoEntity associadoEntity) {
+    associadoEntity.setCelular(associadoDTO.getCelular());
+    associadoEntity.setCpf(associadoDTO.getCpf());
+    associadoEntity.setDataNascimento(associadoDTO.getDataNascimento());
+    associadoEntity.setDataVigenciaPlano(associadoDTO.getDataVigenciaPlano());
+    associadoEntity.setEndereco(associadoDTO.getEndereco());
+    associadoEntity.setNome(associadoDTO.getNome());
+    associadoEntity.setPlanoContratado(associadoDTO.getPlanoContratado());
+    associadoEntity.setRg(associadoDTO.getRg());
+    associadoEntity.setStatusCadastro(associadoDTO.getStatusCadastro());
+    associadoEntity.setTipoPlanoContratado(associadoDTO.getTipoPlanoContratado());
+    return associadoEntity;
   }
 }

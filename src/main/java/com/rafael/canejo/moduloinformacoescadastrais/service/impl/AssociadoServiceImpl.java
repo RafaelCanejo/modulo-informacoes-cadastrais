@@ -25,7 +25,8 @@ public class AssociadoServiceImpl implements AssociadoService {
 
   @Override
   public AssociadoDTO atualizarAssociado(AssociadoDTO associadoDTO) {
-    AssociadoEntity associadoEntity = associadoDTO.converterDTOParaEntity(associadoDTO);
+    AssociadoEntity associadoEntity = associadoRepository.findByCpf(associadoDTO.getCpf());
+    associadoEntity = associadoDTO.atualizarAssociado(associadoDTO, associadoEntity);
     AssociadoDTO associado = associadoDTO.converterEntityParaDTO(associadoRepository.save(associadoEntity));
     log.info("[SUCESSO][Associado atualizado com sucesso: {}]", associadoDTO.getCpf());
     return associado;
@@ -33,7 +34,8 @@ public class AssociadoServiceImpl implements AssociadoService {
 
   @Override
   public void deletarAssociado(String cpf) {
-    associadoRepository.deleteByCpf(cpf);
+    AssociadoEntity associadoEntity = associadoRepository.findByCpf(cpf);
+    associadoRepository.delete(associadoEntity);
     log.info("[SUCESSO][Associado excluído com sucesso: {}]", cpf);
   }
 

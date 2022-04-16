@@ -6,8 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PrestadorRepository extends JpaRepository<PrestadorEntity, Long> {
-
-    void deleteByRegistroProfissional(String registroProfissional);
-
     PrestadorEntity findByRegistroProfissional(String registroProfissional);
 }
