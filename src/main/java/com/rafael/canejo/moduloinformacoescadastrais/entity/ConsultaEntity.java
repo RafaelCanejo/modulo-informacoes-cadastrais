@@ -28,4 +28,15 @@ public class ConsultaEntity implements Serializable{
   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "consulta_seq")
   private Long id;
 
+  private String tipoPlano;
+
+  @Temporal(TemporalType.TIMESTAMP)
+  private Date dataAgendamento;
+
+  @OneToOne
+  @JoinColumn(name = "associado_id", referencedColumnName = "id")
+  private AssociadoEntity associado;
+
+  private String consultaRealizada;
+
 }
